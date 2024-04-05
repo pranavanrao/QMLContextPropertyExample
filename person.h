@@ -16,6 +16,8 @@ public:
     explicit Person(QObject *parent = nullptr) : QObject(parent), m_name("Pranav N Rao"), m_primaryColor("#FF00FF") {}
 
     QString name() const { return m_name; }
+    QColor primaryColor() const { return m_primaryColor; }
+
     void setName(const QString &name) {
         if (name != m_name) {
             m_name = name;
@@ -23,7 +25,6 @@ public:
         }
     }
 
-    QColor primaryColor() const { return m_primaryColor; }
     void setPrimaryColor(const QColor &primaryColor) {
         if (primaryColor != m_primaryColor) {
             m_primaryColor = primaryColor;
