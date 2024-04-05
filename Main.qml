@@ -7,9 +7,13 @@ ApplicationWindow {
     height: 200
     title: "Context Properties Example"
 
-    // Display person's name using the context property
-    Text {
-        anchors.centerIn: parent
-        text: "Hello, " + person.name
+    Rectangle {
+        anchors.fill: parent
+        color: person.primaryColor
+
+        Text {
+            anchors.centerIn: parent
+            text: "Hello, " + person.name
+        }
     }
 }
